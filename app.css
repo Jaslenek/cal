@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #eef1f6;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 650px;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h1 {
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 25px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.glass-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    outline: none;
+    font-size: 14px;
+}
+
+.btn-wrapper {
+    grid-column: 1 / span 2; /* button takes full row */
+}
+
+.gradient-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #4b6fff, #8a4bff);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gradient-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(75, 111, 255, 0.4);
+}
+
+.result-card {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f7f9ff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.result-card .icon {
+    font-size: 28px;
+}
+
+#result-text {
+    font-size: 22px;
+    font-weight: 600;
+}

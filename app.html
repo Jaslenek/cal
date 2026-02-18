@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calories Prediction</title>
+    <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <h1>Calories Predictor</h1>
+
+            <div class="grid">
+
+                <div class="input-group">
+                    <label>Gender</label>
+                    <select id="gender" class="glass-input">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Age</label>
+                    <input type="number" id="age" class="glass-input" placeholder="Age" />
+                </div>
+
+                <div class="input-group">
+                    <label>Height (cm)</label>
+                    <input type="number" id="height" class="glass-input" placeholder="Height" />
+                </div>
+
+                <div class="input-group">
+                    <label>Weight (kg)</label>
+                    <input type="number" id="weight" class="glass-input" placeholder="Weight" />
+                </div>
+
+                <div class="input-group">
+                    <label>Duration (min)</label>
+                    <input type="number" id="duration" class="glass-input" placeholder="Duration" />
+                </div>
+
+                <div class="input-group">
+                    <label>Heart Rate</label>
+                    <input type="number" id="heart_rate" class="glass-input" placeholder="Heart Rate" />
+                </div>
+
+                <div class="input-group">
+                    <label>Body Temperature</label>
+                    <input type="number" step="0.1" id="body_temp" class="glass-input" placeholder="Temp" />
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="gradient-btn" onclick="onPredictClicked()">Predict</button>
+                </div>
+
+            </div>
+
+            <div class="result-card" id="result-card" style="display:none;">
+                <span class="icon">🔥</span>
+                <h2 id="result-text"></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
