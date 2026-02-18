@@ -1,72 +1,89 @@
-Calories Burn Prediction using Machine Learning
+# Calories Burn Prediction Using Machine Learning
 
-This project presents a machine learning framework to predict calories burned during physical activity using demographic and physiological features. Multiple regression models were evaluated, and the best-performing model was deployed as a web application for real-time predictions.
+## 1. Project Overview
 
-Overview
+This project predicts calories burned during physical activity using demographic and physiological inputs.  
+Multiple regression models were evaluated, and the best-performing model was deployed as a Flask-based web application for real-time predictions.
 
-Accurate estimation of energy expenditure is important for fitness tracking and health monitoring. Traditional formula-based approaches rely on simplified assumptions and limited variables. This project applies data-driven regression techniques to capture nonlinear relationships and improve predictive accuracy.
+---
 
-Dataset
+## 2. Dataset
 
 The dataset contains exercise session records with the following features:
 
-Gender
+- Gender  
+- Age  
+- Height (cm)  
+- Weight (kg)  
+- Duration (minutes)  
+- Heart Rate (bpm)  
+- Body Temperature (°C)  
 
-Age
+**Target Variable:** Calories Burned  
 
-Height (cm)
+Data split: 80% Training | 20% Testing  
 
-Weight (kg)
+---
 
-Duration (minutes)
+## 3. Methodology
 
-Heart Rate (bpm)
+### Data Processing
+- Data cleaning and encoding
+- Feature scaling (for SVR and KNN)
 
-Body Temperature (°C)
+### Models Evaluated
+- Ridge Regression
+- Support Vector Regression (RBF)
+- K-Nearest Neighbours
+- Random Forest
+- XGBoost
 
-Target variable: Calories Burned
+### Evaluation Metrics
+- R² Score
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- 5-Fold Cross-Validation
 
-Data was split using an 80/20 train–test ratio.
+---
 
-Methodology
+## 4. Results
 
-Data preprocessing and encoding
+**Best Model: XGBoost**
 
-Feature scaling for SVR and KNN
+- R² Score: 0.9988  
+- MAE: 1.48  
+- RMSE: 2.17  
+- Cross-Validation Mean R²: 0.99889  
 
-Training and comparison of five regression models:
+---
 
-Ridge Regression
+## 5. Deployment
 
-Support Vector Regression (RBF)
+- Backend: Flask  
+- Frontend: HTML, CSS, JavaScript  
+- Model Serialization: Pickle (.pkl)  
+- Real-time prediction via web interface  
 
-K-Nearest Neighbours
+---
 
-Random Forest
+## 6. Tech Stack
 
-XGBoost
+Python  
+Pandas  
+NumPy  
+Scikit-learn  
+XGBoost  
+Flask  
+HTML  
+CSS  
+JavaScript  
 
-Model evaluation using R², MAE, and RMSE
+---
 
-5-fold cross-validation for performance stability
+## 7. How to Run
 
-Results
-
-XGBoost achieved the best performance:
-
-R² Score: 0.9988
-
-MAE: 1.48
-
-RMSE: 2.17
-
-5-fold Cross-Validation Mean R²: 0.99889
-
-Deployment
-
-The final model was serialized and integrated into a Flask-based web application.
-Users can input exercise parameters and receive real-time calorie predictions through a simple web interface built using HTML, CSS, and JavaScript.
-
-Tech Stack
-
-Python, Pandas, NumPy, Scikit-learn, XGBoost, Flask, HTML, CSS, JavaScript
+```bash
+git clone <repository-link>
+cd <project-folder>
+pip install -r requirements.txt
+python app.py
